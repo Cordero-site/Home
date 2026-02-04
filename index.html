@@ -15,7 +15,7 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="Cordero pics/Logo.jpg">
+    <link rel="icon" type="image/jpeg" href="Pics/Logo.jpg">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
         <nav class="navbar" id="navbar">
             <div class="nav-container">
                 <a href="index.html" class="nav-logo" title="Back to Homepage">
-                    <img src="Cordero pics/Logo.jpg" alt="Cordero Sinanglaoan Official Logo - Branding"
+                    <img src="Pics/Logo.jpg" alt="Cordero Sinanglaoan Official Logo - Branding"
                         class="nav-logo-img" loading="lazy" decoding="async">
                 </a>
                 <ul class="nav-menu">
@@ -69,71 +69,98 @@
                 <p class="catering-intro">From elegant wedding receptions to casual backyard parties, we provide
                     authentic Filipino flavors and professional service tailored exactly to your needs.</p>
 
-                <div class="catering-grid">
-                    <!-- Tier 1 -->
-                    <div class="catering-card">
-                        <img src="Cordero pics/Menu Pic2.jpeg" alt="Intimate Gatherings Setup" class="catering-card-bg"
-                            loading="lazy" decoding="async">
-                        <div class="catering-overlay">
-                            <span class="catering-tier-name">Intimate Gatherings</span>
-                            <ul class="catering-features">
-                                <li><i class="fas fa-check"></i> Birthdays & Anniversaries</li>
-                                <li><i class="fas fa-check"></i> Standard Buffet Setup</li>
-                                <li><i class="fas fa-check"></i> Waiter Service Included</li>
-                            </ul>
-
-                            <button class="catering-more-btn">Learn More <i class="fas fa-chevron-down"></i></button>
-                            <div class="catering-details">
-                                <p>Perfect for 20-50 guests. We handle the setup and teardown so you can focus on your
-                                    guests. Custom menu options available upon request.</p>
+                <div class="catering-spotlight">
+                    <!-- Row 1: Intimate Gatherings (Image Left, Text Right) -->
+                    <div class="service-row">
+                        <div class="service-img-wrapper reveal-on-scroll">
+                            <img src="Pics/Menu pic 1.jpg" alt="Intimate Gatherings Setup" class="service-img" loading="lazy">
+                        </div>
+                        <div class="service-text-wrapper reveal-on-scroll">
+                            <h3 class="service-title">Intimate Gatherings</h3>
+                            <div class="service-separator"></div>
+                            <p class="service-desc">Perfect for 20-50 guests. We handle the setup and teardown so you can focus on your guests. Custom menu options available upon request.</p>
+                            
+                            <button class="learn-more-toggle">Learn More <i class="fas fa-chevron-down"></i></button>
+                            <div class="service-details">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Birthdays & Anniversaries</li>
+                                    <li><i class="fas fa-check"></i> Standard Buffet Setup</li>
+                                    <li><i class="fas fa-check"></i> Waiter Service Included</li>
+                                </ul>
                             </div>
+
+                            <a href="menu.html" class="btn-primary service-btn">View Menu</a>
                         </div>
                     </div>
 
-                    <!-- Tier 2 -->
-                    <div class="catering-card">
-                        <img src="Cordero pics/Menu Pic 3.jpeg" alt="Corporate Event Catering" class="catering-card-bg"
-                            loading="lazy" decoding="async">
-                        <div class="catering-overlay">
-                            <span class="catering-tier-name">Corporate Events</span>
-                            <ul class="catering-features">
-                                <li><i class="fas fa-check"></i> Seminars & Meetings</li>
-                                <li><i class="fas fa-check"></i> Quick Setup & Removal</li>
-                                <li><i class="fas fa-check"></i> Individually Packed Options</li>
-                            </ul>
-
-                            <button class="catering-more-btn">Learn More <i class="fas fa-chevron-down"></i></button>
-                            <div class="catering-details">
-                                <p>Professional service for business functions. Flexible scheduling to match your
-                                    agenda. High-legibility menu placards included.</p>
+                    <!-- Row 2: Corporate Events (Text Left, Image Right) -->
+                    <div class="service-row reverse">
+                        <div class="service-text-wrapper reveal-on-scroll">
+                            <h3 class="service-title">Corporate Events</h3>
+                            <div class="service-separator"></div>
+                            <p class="service-desc">Professional service for business functions. Flexible scheduling to match your agenda. High-legibility menu placards included.</p>
+                            
+                            <button class="learn-more-toggle">Learn More <i class="fas fa-chevron-down"></i></button>
+                            <div class="service-details">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Seminars & Meetings</li>
+                                    <li><i class="fas fa-check"></i> Quick Setup & Removal</li>
+                                    <li><i class="fas fa-check"></i> Individually Packed Options</li>
+                                </ul>
                             </div>
+
+                            <a href="tel:09692832346" class="btn-primary service-btn">Inquire Now</a>
+                        </div>
+                        <div class="service-img-wrapper reveal-on-scroll">
+                            <img src="Pics/Menu pic 3.jpg" alt="Corporate Event Catering" class="service-img" loading="lazy">
                         </div>
                     </div>
 
-                    <!-- Tier 3 -->
-                    <div class="catering-card">
-                        <img src="Cordero pics/Menu Pic 1.jpeg" alt="Party Tray Spreads" class="catering-card-bg"
-                            loading="lazy" decoding="async">
-                        <div class="catering-overlay">
-                            <span class="catering-tier-name">Custom Party Trays</span>
-                            <ul class="catering-features">
-                                <li><i class="fas fa-check"></i> Choose Any Menu Dish</li>
-                                <li><i class="fas fa-check"></i> Small/Med/Large Trays</li>
-                                <li><i class="fas fa-check"></i> Pick-up or Delivery</li>
-                            </ul>
-
-                            <button class="catering-more-btn">Learn More <i class="fas fa-chevron-down"></i></button>
-                            <div class="catering-details">
-                                <p>Need great food without the full service? Our party trays are the perfect solution
-                                    for potlucks and family dinners.</p>
+                    <!-- Row 3: Custom Party Trays (Image Left, Text Right) -->
+                    <div class="service-row">
+                        <div class="service-img-wrapper reveal-on-scroll">
+                            <img src="Pics/Menu pic 4.jpg" alt="Party Tray Spreads" class="service-img" loading="lazy">
+                        </div>
+                        <div class="service-text-wrapper reveal-on-scroll">
+                            <h3 class="service-title">Custom Party Trays</h3>
+                            <div class="service-separator"></div>
+                            <p class="service-desc">Need great food without the full service? Our party trays are the perfect solution for potlucks and family dinners.</p>
+                            
+                            <button class="learn-more-toggle">Learn More <i class="fas fa-chevron-down"></i></button>
+                            <div class="service-details">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Choose Any Menu Dish</li>
+                                    <li><i class="fas fa-check"></i> Small/Med/Large Trays</li>
+                                    <li><i class="fas fa-check"></i> Pick-up or Delivery</li>
+                                </ul>
                             </div>
+
+                            <a href="menu.html" class="btn-primary service-btn">Order Trays</a>
                         </div>
                     </div>
-                </div>
 
-                <div class="catering-ctas">
-                    <a href="tel:09692832346" class="btn-call"><i class="fas fa-phone"></i> Inquire Now</a>
-                    <a href="menu.html" class="btn-primary">View Sample Menus</a>
+                    <!-- Row 4: Packed Orders (Text Left, Image Right) -->
+                    <div class="service-row reverse">
+                        <div class="service-text-wrapper reveal-on-scroll">
+                            <h3 class="service-title">Packed Orders</h3>
+                            <div class="service-separator"></div>
+                            <p class="service-desc">Nutritious and delicious packed meals designed for convenience without compromising on flavor. Perfect for office lunches or busy individuals.</p>
+                            
+                            <button class="learn-more-toggle">Learn More <i class="fas fa-chevron-down"></i></button>
+                            <div class="service-details">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Individually Portioned</li>
+                                    <li><i class="fas fa-check"></i> High-Quality Packaging</li>
+                                    <li><i class="fas fa-check"></i> Ideal for Daily Meals</li>
+                                </ul>
+                            </div>
+
+                            <a href="tel:09692832346" class="btn-primary service-btn">Order Packs</a>
+                        </div>
+                        <div class="service-img-wrapper reveal-on-scroll">
+                            <img src="Pics/Pack orders 1.jpg" alt="Packed Orders" class="service-img" loading="lazy">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -161,7 +188,7 @@
     <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-logo">
-                <img src="Cordero pics/Logo.jpg" alt="Cordero Sinanglaoan Restaurant Logo" class="footer-logo-img"
+                <img src="Pics/Logo.jpg" alt="Cordero Sinanglaoan Restaurant Logo" class="footer-logo-img"
                     loading="lazy" decoding="async">
                 <span>Cordero Sinanglaoan</span>
             </div>
@@ -185,25 +212,6 @@
     <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"></script>
     <script src="script.js"></script>
-    <script>
-        // Back to Top Button Logic
-        const backToTopBtn = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
-        });
-
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
 </body>
 
 </html>

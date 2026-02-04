@@ -63,9 +63,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const carouselPrevBtn = document.querySelector('.carousel-btn.prev');
     const carouselNextBtn = document.querySelector('.carousel-btn.next');
     if (dishCarousel && carouselPrevBtn && carouselNextBtn) {
-        const scrollAmount = 305;
-        carouselPrevBtn.addEventListener('click', () => { dishCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' }); });
-        carouselNextBtn.addEventListener('click', () => { dishCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' }); });
+        carouselPrevBtn.addEventListener('click', () => { 
+            const itemWidth = dishCarousel.querySelector('.dish-item').offsetWidth + 30; // item + gap
+            dishCarousel.scrollBy({ left: -itemWidth, behavior: 'smooth' }); 
+        });
+        carouselNextBtn.addEventListener('click', () => { 
+            const itemWidth = dishCarousel.querySelector('.dish-item').offsetWidth + 30; // item + gap
+            dishCarousel.scrollBy({ left: itemWidth, behavior: 'smooth' }); 
+        });
     }
 
     const categoryTeasers = document.querySelectorAll('.cat-teaser');
@@ -99,20 +104,59 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(section);
     });
 
-    // Catering Accordion Logic
-    const cateringBtns = document.querySelectorAll('.catering-more-btn');
-    cateringBtns.forEach(btn => {
+    // Staggered Animation for Menu Items
+    const menuItems = document.querySelectorAll('.menu-item-box');
+    if (menuItems.length > 0) {
+        const menuObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger items that appear in the same batch
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 150); 
+                    menuObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        menuItems.forEach(item => {
+            menuObserver.observe(item);
+        });
+    }
+
+    // Catering Accordion Logic Removed
+    
+    // Learn More Toggle Logic
+    const learnMoreBtns = document.querySelectorAll('.learn-more-toggle');
+    learnMoreBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const details = btn.nextElementSibling;
-            const icon = btn.querySelector('i');
-
-            details.classList.toggle('expanded');
-
-            if (details.classList.contains('expanded')) {
+            details.classList.toggle('visible');
+            
+            if (details.classList.contains('visible')) {
                 btn.innerHTML = `Show Less <i class="fas fa-chevron-up"></i>`;
             } else {
                 btn.innerHTML = `Learn More <i class="fas fa-chevron-down"></i>`;
             }
         });
     });
+
+    // Back to Top Button Logic
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
